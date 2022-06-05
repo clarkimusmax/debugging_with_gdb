@@ -74,6 +74,8 @@ Step a few times until you're a little ways into you program and then tell gdb t
 - `rs` ("reverse-step"),  
 - `rsi` ("reverse-step-instruction"),  
 - `reverse-finish`,  
-- `rc` ("reverse-continue")  
+- `rc` ("reverse-continue") 
+
 (Note: If you see an error like "Target native does not support this command.", you probably forgot to tell gdb to record.)  
+
 Try reverse-debugging (also known as "time travel debugging") the "crash" program  
