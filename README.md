@@ -21,10 +21,10 @@ Send signal to program: `signal SIGSEGV` (`man 7 signal` for more options)
 Detach from program: `detach`  
 Detach from program: `[CTRL]+d`  
 
-### Stopping a program
+### Stopping a Program
 Stop program: `[CTRL]+c` (GDB will trap this signal by default)  
 
-### Stepping a progam
+### Stepping a Progam
 Step one line of code: `s` ("step", will enter functions)  
 Step one instruction: `si` ("step instruction", will enter functions)  
 Step one line of code: `n` ("next", will not enter functions)  
@@ -65,7 +65,7 @@ Drop to shell from GDB: `shell`
 Toggle the zero flag: `set $eflags ^= (1 << 6)` (useful for forcing a program to take/not take a branch)  
 Print 10 lines of code:	`list`  
 
-## Controlling time itself
+## Controlling Time Itself
 Set `LD_BIND_NOW=1` to force symbol resolution at load time when running the debugger: `LD_BIND_NOW=1 gdb ./hello` (try the following without this to see why)  
 Start your program and tell GDB to start recording execution: `record`  
 Step a few times until you're a little ways into you program and then tell gdb to time-travel:  
