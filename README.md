@@ -69,11 +69,11 @@ Print 10 lines of code:	`list`
 Set `LD_BIND_NOW=1` to force symbol resolution at load time when running the debugger: `LD_BIND_NOW=1 gdb ./hello` (try the following without this to see why)  
 Start your program and tell GDB to start recording execution: `record`  
 Step a few times until you're a little ways into you program and then tell gdb to time-travel:  
-- `rn` ("reverse-next"),  
-- `rni` ("revese-next-instruction"),  
-- `rs` ("reverse-step"),  
-- `rsi` ("reverse-step-instruction"),  
-- `reverse-finish`,  
+- `rn` ("reverse-next")  
+- `rni` ("revese-next-instruction")  
+- `rs` ("reverse-step")  
+- `rsi` ("reverse-step-instruction")  
+- `reverse-finish`  
 - `rc` ("reverse-continue") 
   
 (Note: If you see an error like "Target native does not support this command.", you probably forgot to tell gdb to record.)  
