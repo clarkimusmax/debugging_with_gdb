@@ -53,8 +53,8 @@ Print registers: `i r` ("info registers")
 Print 10 addresses from the stack pointer: `x/10a $rsp`  
 Print 20 instructions from the instruction pointer: `x/20i $rip`  
 Print string pointed to by RDI: `x/s $rdi`  
-Print assembly starting at current instruction: `disassemble`  
-Print assembly starting at function: `disassemble main`  
+Print assembly for current function: `disassemble`  
+Print assembly for a function: `disassemble main`  
 
 ## Misc
 Display assembly in inferior syntax: `set disassembly-flavor intel`  
