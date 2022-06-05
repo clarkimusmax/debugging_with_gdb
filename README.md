@@ -27,7 +27,7 @@ Stop program: `[CTRL]+c` (GDB will trap this signal by default)
 ### Stepping a progam
 Step one line of code: `s` ("step", will enter functions)  
 Step one instruction: `si` ("step instruction", will enter functions)  
-Set one line of code: `n` ("next", will not enter functions)  
+Step one line of code: `n` ("next", will not enter functions)  
 Step one instruction: `ni` ("next instruction", will not enter functions)  
 Step out of function: `finish`  
 Continue execution: `c` ("continue")  
