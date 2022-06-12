@@ -47,6 +47,7 @@ Switch thread: `thread 2` (run `bt` again to get thread's call stack)
 
 ## Viewing Data
 View local variables: `i lo` ("info locals")  
+View function arguments: `i args`  
 Print variable: `print my_var`  
 Print structure members: `print *my_struct`  
 Print registers: `i r` ("info registers")  
