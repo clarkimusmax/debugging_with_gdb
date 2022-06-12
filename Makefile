@@ -1,7 +1,7 @@
 # Set the c compiler to gcc
 CC = gcc
 
-# Include debugging sybmols, don't optimize, display all warning, display even more warning, treat warnings as errors
+# Include debugging sybmols, don't optimize, display all warnings, display even more warnings, treat warnings as errors
 CFLAGS = -ggdb -O0 -Wall -Wextra -Werror
 
 .PHONY: all
