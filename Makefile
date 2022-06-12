@@ -1,5 +1,8 @@
+# Set the c compiler to gcc
 CC = gcc
-CFLAGS = -ggdb -O0 -Wall -Wextra
+
+# Include debugging sybmols, don't optimize, display all warning, display even more warning, treat warnings as errors
+CFLAGS = -ggdb -O0 -Wall -Wextra -Werror
 
 .PHONY: all
 all: hello crash
