@@ -49,7 +49,7 @@ Switch thread: `thread 2` (run `bt` again to get thread's call stack)
 View local variables: `i lo` ("info locals")  
 View function arguments: `i args`  
 Print variable: `print my_var`  
-Print structure members: `print *my_struct`  
+Print structure members: `print my_struct`  
 Print registers: `i r` ("info registers")  
 Print 10 addresses from the stack pointer: `x/10a $rsp`  
 Print 20 instructions from the instruction pointer: `x/20i $rip`  
