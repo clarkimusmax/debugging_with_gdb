@@ -37,7 +37,7 @@ Break on function: `br main` (or other function name)
 Break at line of file: `br hello.c:2`  
 Break at address: `br *0x7ffff7e37e1b`  
 View breakpoints: `i br` ("info breakpoints")  
-Delete breakpoint: `del 2`
+Delete breakpoint: `del 2`  
 Delete all breakpoints: `del`
 
 ## Gaining Bearing
