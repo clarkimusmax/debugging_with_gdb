@@ -37,8 +37,16 @@ Break on function: `br main` (or other function name)
 Break at line of file: `br hello.c:2`  
 Break at address: `br *0x7ffff7e37e1b`  
 View breakpoints: `i br` ("info breakpoints")  
-Delete breakpoint: `del 2`
-Delete all breakpoints: `del`
+Delete breakpoint: `del 2`  
+Delete all breakpoints: `del`  
+Set command(s) to run at breakpoint (after `commands` enter commands and end with `end`):  
+```
+br hello.c:2
+commands
+x/32a $eip
+x/10i $eip
+end
+```
 
 ## Gaining Bearing
 Show call stack: `bt` ("backtrace")  
