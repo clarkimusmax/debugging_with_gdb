@@ -43,7 +43,7 @@ Set command(s) to run at breakpoint (after `commands` enter commands and end wit
 ```
 br hello.c:2
 commands
-x/32a $eip
+x/32a $esp
 x/10i $eip
 end
 ```
