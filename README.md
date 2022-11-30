@@ -74,6 +74,7 @@ Drop to shell from GDB: `shell`
 	View process' memory maps: `cat /proc/[PID]/maps` (does have pages & permissions)  
 Toggle the zero flag: `set $eflags ^= (1 << 6)` (useful for forcing a program to take/not take a branch)  
 Print 10 lines of code:	`list`  
+LD_PRELOAD a shared object: `set exec-wrapper env 'LD_PRELOAD=/path/to/libc.so.6'`  
 
 ## Controlling Time Itself
 Set `LD_BIND_NOW=1` to force symbol resolution at load time when running the debugger: `LD_BIND_NOW=1 gdb ./hello` (try the following without this to see why)  
