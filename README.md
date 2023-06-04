@@ -75,6 +75,28 @@ Drop to shell from GDB: `shell`
 Toggle the zero flag: `set $eflags ^= (1 << 6)` (useful for forcing a program to take/not take a branch)  
 Print 10 lines of code:	`list`  
 LD_PRELOAD a shared object: `set exec-wrapper env 'LD_PRELOAD=/path/to/libc.so.6'`  
+Call an arbitrary function: `call (char*) getenv("PATH")`  
+When stopped at a return, print disassembly at address on stack: `x/20i *(long*)$esp`   
+Enable writing to the debugged program: `gdb --write [program]` or `set write on` within GDB   
+Run program with input in GDB with minimal environment (useful for ensuring address consistency):  
+```
+env -i PWD=$PWD SHELL="/bin/bash" gdb /full/path/to/program`
+r < program_input
+```
+Run program with minimal environment (useful for ensuring address consistency):  
+```
+cat program_input | env -i PWD=$PWD SHELL="/bin/bash" /full/path/to/program
+```
+Unset environment variables that GDB sets by default (useful for ensuring address consistency):
+```
+unset environment LINES
+unset environment COLUMNS
+```  
+
+## Signal Handling
+View signal handling information: `i signal`  
+Set catchpoint for signal: `catch signal SIGUSR1`  
+Ignore signal (gdb does not stop and signal is not passed to program): `handle SIGALRM nostop ignore`  
 
 ## Controlling Time Itself
 Set `LD_BIND_NOW=1` to force symbol resolution at load time when running the debugger: `LD_BIND_NOW=1 gdb ./hello` (try the following without this to see why)  
